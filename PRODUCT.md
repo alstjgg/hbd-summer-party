@@ -64,9 +64,13 @@ the others contradicts the product.
 - The single-day evening event has no overnight stay. Indoors, in a water party room
   with a small pool area.
 - Formality is come-as-you-are: a casual gathering of close friends.
-- Guests must arrive with light swim gear — a swimsuit or clothes that can get wet, a
-  towel, and a change of clothes. The pool area is small, so the instruction is to
-  pack light. This is the one piece of practical content the site must deliver.
+- Guests must arrive with light swim gear. **Corrected 2026-08-25:** the venue does
+  NOT permit ordinary clothes in the water — only a swimsuit or a rashguard. Aqua
+  shoes are wanted too, for slip protection. **Towels are provided by the venue** and
+  are no longer a guest's responsibility. The list is therefore: swimsuit or
+  rashguard, aqua shoes, a change of clothes. The pool area is small, so the
+  instruction is still to pack light. This is the one piece of practical content the
+  site must deliver, and the earlier "clothes that can get wet" wording was wrong.
 - A venue map link is confirmed and supplied: <https://naver.me/Fr7bgqO0> (Naver Map
   short link). This is the only outbound link the site has. No street address, phone
   number, or transit detail beyond it has been supplied, and none may be invented.
@@ -84,7 +88,11 @@ Confirmed content the site carries:
 - Date and time: Friday, August 28, 2026, 5:00 PM
 - Venue: Urban Picnic 어반피크닉 워터파티룸 분당서현점
 - Venue map link: <https://naver.me/Fr7bgqO0>
-- What to bring: swimsuit or clothes that can get wet, towel, change of clothes; pack light
+- What to bring: swimsuit or rashguard (ordinary clothes are not allowed in the water),
+  aqua shoes, a change of clothes; pack light. Towels are provided by the venue.
+- Cost: 1/N 정산 — split evenly
+- Venue rules: no diving, no water guns, no bath salts, no swimming after drinking,
+  no eating in the pool
 - The five birthday people, as a count and a motif only.
 
 **No person is named on the site. This includes the host.** The organizer is 민서, and
@@ -147,9 +155,10 @@ someone tries to use it.
    prominent breaks the premise, and since no one is named at all — host included —
    the page has to carry warmth without a byline to lean on.
 
-4. **Nobody leaves without their towel.** With RSVP already settled, the one thing the
-   site can still get wrong is a guest arriving with nothing to swim in. Practical
-   preparation is a first-class outcome, not a footnote.
+4. **Nobody arrives unable to get in the water.** With RSVP already settled, the one
+   thing the site can still get wrong is a guest turning up in clothes the venue will
+   not allow in the pool. Practical preparation is a first-class outcome, not a
+   footnote — and the packing list is a venue rule, not a suggestion.
 
 5. **Absent facts stay visibly absent.** A placeholder that looks real is worse than a
    blank. Everything the site states is on the confirmed list above; anything not on it
