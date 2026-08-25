@@ -108,8 +108,8 @@ components:
 # Design System: HBD Summer Party
 
 <!-- Recorded from the built surface (src/pages/index.astro, src/layouts/Base.astro,
-     src/components/FiveMarks.astro, dist/index.html). Where prose and code disagreed,
-     the code won. -->
+     src/components/FiveMarks.astro, astro.config.mjs, scripts-postbuild.mjs, dist/index.html,
+     public/img/*.webp + sidecars). Where prose and code disagreed, the code won. -->
 
 ## Overview
 
@@ -132,9 +132,17 @@ printing job.
 It is one surface, built once, for one evening. There is no component library here and this
 record does not pretend otherwise: what is documented below is the set of durable rules the
 single page actually establishes — the palette and its contrast law, a named type ramp, a
-band-based vertical rhythm, one pill action, and one repeated five-mark motif. The system's
-hardest constraints are not visual preferences but product law: nobody is named, the five
-appear only as a count, and nothing on the page collects a response.
+band-based vertical rhythm, one pill action, two illustrated object grids, and the five-mark
+motif. The system's hardest constraints are not visual preferences but product law: nobody is
+named, the five appear only as a count, and nothing on the page collects a response.
+
+The page no longer *states* its premise. The section that spelled "Horizontal Celebration"
+out in copy has been cut, so the Rule of Five now survives **visually only** — five candles
+on the hero cake, five identical marks at the foot, and no sentence anywhere explaining
+either. That is deliberate: the premise is carried, not narrated. It also means the rule has
+lost its verbal safety net, and the two counts are now the only thing holding it. Do not
+restore the explanation, and do not let a count drift on the reasoning that nothing says
+five any more.
 
 **Key Characteristics:**
 
@@ -144,6 +152,7 @@ appear only as a count, and nothing on the page collects a response.
 - A print grain over the entire sheet, which the base palette is calibrated *around*.
 - Two display faces (Latin poster + Korean poster) over one quiet Korean body face.
 - Exactly five, everywhere five appears — equality by construction, not by care.
+- Illustrations are knocked-out rasters; the page's own ground and grain run behind them.
 - One motion moment on the whole page.
 
 ## Colors
@@ -164,7 +173,7 @@ the outline ink.
 ### Secondary
 
 - **Chartreuse** (`{colors.chartreuse}`): the voice of the poster. Display type
-  (`HBD SUMMER PARTY`, `8.28 17:00`, `See you at the water`), the hailing-port line under
+  (`HBD SUMMER PARTY`, `8.28 17:00`, `See you then`), the hailing-port line under
   the character, the kit item names, links, the focus ring, the selection highlight, the
   one full-bleed colour band, the primary action fill, and the candle flames. 6.20:1 on the
   pool ground.
@@ -251,7 +260,8 @@ register and one calm one, with nothing in between.
   `white-space: nowrap` so it stays one unbroken line), the date lockup at the largest scale
   in the frontmatter, and the closing line (`{typography.close}`). Always chartreuse.
 - **Headline** (Black Han Sans, 400, `clamp(2.05rem, 8.6vw, 4.6rem)`, line-height 1.15): the
-  Korean section openers that carry the page's two loudest ideas.
+  Korean section openers for the page's three substantial sections — the particulars, the
+  packing kit, and the venue rules.
 - **Title** (Black Han Sans, 400, `clamp(1.75rem, 7.4vw, 3.4rem)`, line-height 1.25): the
   quieter Korean section headings, and the same face steps down for the action label. The
   hailing-port line under the character shares the face but is its own ramp step
@@ -275,7 +285,9 @@ merged — a step exists only where a role genuinely needs one.
 - **`--fs-note`** (`{typography.note}`): quiet secondary notes, on both the pool bands and
   the chartreuse one.
 - **`--fs-ko-md`** (`{typography.ko-md}`): kit item names and the loud note on the fill band.
-- **`--fs-ko-sm`** (`{typography.ko-sm}`): the closing Korean line.
+- **`--fs-ko-sm`** (`{typography.ko-sm}`): the venue-rule captions and the closing Korean
+  line. (The token's inline comment in `Base.astro` still says "closing Korean line" only;
+  the step now carries both roles.)
 - **`--fs-fact`** (`{typography.fact}`): the values in the facts rows.
 - **`--fs-venue`** (`{typography.venue}`): the hailing-port line under the character.
 - **`--fs-close`** (`{typography.close}`): the closing poster lockup.
@@ -339,22 +351,41 @@ fold, and the character is the subject of the frame rather than an object floati
 the type caps were lowered and the art cap raised together at the last retune, as one
 budget rather than as three separate sizes.
 
-Bands below the fold are centred text by default; the Rule-of-Five band is the one
-deliberate exception and aligns left.
+Every band below the fold is centre-aligned. The single off-centre treatment the page once
+carried (`.band--left`, for the section that spelled out the five) went out with that
+section: the CSS was **deleted, not left dormant**, so there is no half-alive alternative
+alignment waiting to be reused. The only thing that sets its own alignment now is the facts
+list, left-aligned *inside* a centred band because a definition list needs a term column.
+
+Two illustrated object grids sit inside bands. Both are centred, both capped, and both step
+up at the same breakpoint:
+
+- **The kit** — one column on a phone, `repeat(3, 1fr)` at `40rem`; max 52rem; images
+  height-constrained at `min(11rem, 42vw)`.
+- **The venue rules** — `repeat(2, minmax(0,1fr))` on a phone, five across at `40rem`; max
+  60rem stepping to 66rem; icons at `min(6.5rem, 26vw)` stepping to `8rem` tall.
 
 Only three breakpoints exist, and each one earns its place:
 
-- **`40rem`** — the three packing-kit items go from a single column to `repeat(3, 1fr)`.
-- **`64rem` and landscape** — the Rule-of-Five band splits into two columns
-  (`minmax(0,1fr) minmax(0,1.1fr)`, max 82rem, centred), the poster tightens its gap, the
-  character takes `min(46vw, 46rem)` wide by `min(46svh, 46rem)` tall, and bands widen
-  their inline padding to `max(var(--gutter), 8vw)`.
+- **`40rem`** — both object grids reflow: the kit to three columns, the venue rules to five
+  across, and the orphan-centring rule below is switched back off.
+- **`64rem` and landscape** — the poster tightens its gap to `1.5rem`, the character takes
+  `min(46vw, 46rem)` wide by `min(46svh, 46rem)` tall, and bands widen their inline padding
+  to `max(var(--gutter), 8vw)`.
 - **`max-height: 34rem` and landscape** — short landscape phones drop the poster's
   `100svh` floor and cap the character at `46svh` so the date stays on screen.
 
-**The Centred-Except-Once Rule.** The page is centre-aligned; exactly one band breaks
-alignment (the Rule-of-Five section, left-aligned, with its five marks pushed to
-`flex-start`). One deliberate break reads as intent; three read as inconsistency.
+**The Centred Column Rule.** The page is one centred column from the poster to the foot.
+Nothing sits off-centre, nothing is asymmetric, nothing is set in two columns of prose. The
+facts list's left alignment is a table's alignment, not a layout break, and it stays inside a
+centred, measure-capped block.
+
+**The No Orphan Rule.** An odd count in an even grid is centred, never left hanging at the
+start of a row. The five venue rules run two-up on a phone and the fifth is pulled across the
+full width with `:last-child:nth-child(odd) { grid-column: 1 / -1; }`, then released at
+`40rem` where all five sit in one row. Any future odd set in an even grid does the same. Do
+not "solve" it by padding the set to an even count — the counts on this page are facts, not
+layout inputs.
 
 ## Elevation & Depth
 
@@ -398,8 +429,8 @@ established by a band (full-bleed colour or hairline-topped), never by a bordere
 
 ## Components
 
-There is no component library — one page, one action, one motif. These are the durable
-patterns it establishes.
+There is no component library — one page, one action, two object grids, one motif. These are
+the durable patterns it establishes.
 
 ### The Action (primary and only)
 
@@ -428,11 +459,12 @@ The page's only container grammar. Three treatments, all full-bleed:
 
 ### Facts List
 
-A definition list of date / time / venue as two-column rows (`4.5rem 1fr`, baseline-aligned,
-0.9rem vertical padding), hairline-bordered top and bottom, held to a 34rem measure and
-left-aligned inside a centred band. Terms are the tracked uppercase label role; values are
-bold at `clamp(1.02rem, 4vw, 1.25rem)`, with a softer cream mix for parenthetical detail
-(the weekday).
+A definition list of the four particulars — date, time, venue, cost — as two-column rows
+(`4.5rem 1fr`, baseline-aligned, 0.9rem vertical padding), hairline-bordered top and bottom,
+held to a 34rem measure and left-aligned inside a centred band. Terms are the tracked
+uppercase label role; values are bold at `{typography.fact}`, with a softer cream mix for
+parenthetical detail (the weekday). The list grows by adding a row, never by adding a second
+column or a second list: a fact that does not fit the term/value shape does not belong here.
 
 ### Five Marks (signature)
 
@@ -441,14 +473,108 @@ is defined once and placed with `<use>` five times at a 54-unit pitch; the whole
 exposed as one `role="img"` with a Korean label and the SVG itself is `aria-hidden`. Fills
 reference live custom properties (`--chartreuse` flame, `--cream` body, `--persimmon`
 stripes, `--outline` at 2.4 stroke-width), so the motif recolours with the palette. It sizes
-at `min(15rem, 62vw)` and appears twice: in the Rule-of-Five band (pushed left) and at the
-foot of the closing band.
+at `min(15rem, 62vw)` and appears **exactly once**, centred at the foot of the closing band.
+The second instance went out with the section that explained the premise; one placement is
+now the whole visual budget for the motif, which makes it the page's signing-off mark rather
+than a repeated decoration.
 
 **The Rule of Five.** Five is a product premise, not a visual flourish — five candles on the
-hero cake, five marks in the motif. A build that ships four has shipped a different design.
-The marks are authored as *one* shape used five times precisely so the equality is true by
-construction rather than by care: no instance can drift, be emphasised, or be styled apart.
-Never differentiate one of the five — not by size, colour, order, animation, or position.
+hero cake, five marks at the foot. Those two counts are now the *only* place the premise
+lives: no copy on the page states it any more. A build that ships four has shipped a
+different design, and there is no longer a sentence to catch the error. The marks are
+authored as *one* shape used five times precisely so the equality is true by construction
+rather than by care: no instance can drift, be emphasised, or be styled apart. Never
+differentiate one of the five — not by size, colour, order, animation, or position — and
+never change a count for a layout's convenience.
+
+### Character Row (the kit)
+
+Three illustrated characters — swimsuit, aqua shoes, dry clothes — one per column on the
+chartreuse fill band, each a knocked-out raster with a Korean poster-face name under it
+(`{typography.ko-md}`, pool on chartreuse) and a quiet note under that. The images are
+**height**-constrained (`min(11rem, 42vw)`) rather than width-constrained, so three drawings
+of different aspect ratios sit on one optical baseline instead of on one bounding box.
+
+Notes are authored as an **array of lines** and rendered with `<br>` between them, because
+two of the three break deliberately. The break carries meaning — "래시가드도 좋아요 / 일반
+옷은 입수가 안돼요" is a permission and then a restriction, not one sentence that happened to
+wrap. A deliberate break is content and is authored; it is never left to the wrapper to find.
+
+The band signs off with the loud note (`{typography.ko-md}`, Korean poster face), the one
+place a note is allowed to shout.
+
+**The Kit Is Not Advice Rule.** The packing list is not friendly advice. Ordinary clothes are not
+permitted in the water — swimsuit or rashguard only — towels come from the venue, and aqua
+shoes are a slip precaution. Each note states the venue's actual condition rather than a
+suggestion, and none of the three items may be softened into a "you might want to bring"
+without changing what is true.
+
+### Prohibition Grid (the venue rules)
+
+Five generated warning icons — a thick persimmon circle-and-bar drawn over each object — in a
+two-up grid on a phone (fifth centred, see The No Orphan Rule) and five across from `40rem`.
+The icons are smaller than the kit characters (`min(6.5rem, 26vw)`, stepping to `8rem`) and
+the captions are **cream** at `{typography.ko-sm}` rather than chartreuse: this band states
+restrictions and is deliberately quieter than the band that hands you a packing list. It sits
+on a plain rule band, with no colour block of its own.
+
+**The Two Icon Registers Rule.** This world draws objects in two registers and never mixes
+them. A *character* is alive — legs, feet, round eyes with highlights, a curved mouth, arms
+mid-wave — and is used for things you are being invited to bring. A *prohibition* is the same
+flat silkscreen object with **no face and no limbs**, under a persimmon ring-and-bar. Never
+give a prohibition icon eyes, and never draw a welcome as a sign. The registers are how a
+reader tells an invitation from a restriction before reading a word of Korean.
+
+### Character Rasters
+
+Nine illustrations ship: the hero cake, three kit characters, five prohibition icons. All
+nine are generated in the silkscreen style **on the `#013237` ground** — the model needs the
+real ground to get the outline and edge colours right — and then knocked out to transparent
+alpha, so what ships is a cut-out that composites over the page's own `{colors.pool}` with
+the print grain running across it unbroken. That is why alpha fidelity matters more here than
+colour fidelity.
+
+- **Format:** WebP, quality 92, method 6, `alpha_quality 100`. The PNG masters live in
+  `.impeccable/assets-src/`, versioned in git and **never served**.
+- **Weight:** nine rasters, 1.4 MB; the live page weighs 1.38 MB in total.
+- **Loading:** the hero carries `fetchpriority="high"` and a `<link rel="preload">`; every
+  raster below the fold is `loading="lazy"`; all are `decoding="async"`.
+- **Provenance:** one `.json` sidecar per raster, beside the asset in `public/img/`, carrying
+  the full generation prompt inline plus the encoding line.
+
+**The q92 Margin Rule.** WebP quality is 92, and the reasoning is recorded here so it is not
+re-tuned by feel. Lossless WebP came in only 46% under the PNG masters — still 4.2 MB, far
+too heavy for an invitation opened on a phone on mobile data. Dropping to q88 bought a
+further 160 KB across all nine, which is not worth spending the margin for. q92 costs almost
+nothing over q88 and leaves headroom, so q92 is the setting.
+
+**The PSNR Blind Spot Rule.** These rasters measure **33–36 dB PSNR**, which looks poor for
+flat art and is not. The generated print grain is high-frequency noise across the whole
+frame, and the grain is what the metric is charging for; at 1:1 the outlines, the flat fills
+and the alpha edges are indistinguishable from the masters, and alpha is bit-exact. **PSNR is
+the wrong instrument for grain-bearing flat art.** Do not raise the quality, switch to
+lossless, or "fix" the encoder settings to chase that number. Judge these assets by comparing
+them to the master at 1:1, or do not judge them.
+
+**The Sidecar Is The Provenance Rule.** `embed-prompt.mjs` cannot write a metadata chunk into
+WebP. For these nine assets the `.json` sidecar is therefore **the** provenance record — not
+a convenience duplicate of something embedded in the file, because nothing is embedded and
+there is no fallback to recover from. **Deleting a sidecar silently destroys the record of
+how that image was made, permanently.** The sidecars live beside the assets in `public/img/`
+so the tooling finds them and `--scan` passes; they are working notes rather than page
+content, so `scripts-postbuild.mjs` — wired into `npm run build` — strips every `.json` from
+`dist/img/` before the site is published. Never move a sidecar out of `public/img/`, never
+remove the postbuild step, and never answer the "why are working notes in the served
+directory" objection by deleting them instead of letting the build strip them.
+
+**The BASE_URL Rule.** The site is served from a project subpath
+(`https://alstjgg.github.io/hbd-summer-party/`, from the `gh-pages` branch) and
+`astro.config.mjs` carries `base: '/hbd-summer-party/'`. Astro rewrites the URLs it
+generates; it does **not** rewrite a hand-written string. Every hand-written asset URL — each
+`<img src>`, the favicon, the OG image, the hero preload — is built from
+`import.meta.env.BASE_URL`. A literal `/img/...` or `/favicon.svg` works perfectly in
+`astro dev` and 404s in production, which is the worst failure shape there is. Never hardcode
+a root-absolute asset path.
 
 ### Motion
 
@@ -486,10 +612,23 @@ collapses transitions to 0.001ms.
   shapes as one `<use>` repeated, so equality cannot drift.
 - **Do** draw new flat, countable shape systems (marks, icons, rules) as **authored SVG in
   code**, inline, stroked with the palette's custom properties.
-- **Do** generate new **character** illustrations as rasters in `public/img/`, in the
-  established silkscreen style, on the `#013237` ground, each with its `.png.json` provenance
-  sidecar carrying the **full generation prompt inline** alongside model, post-processing and
-  reference comp — readable without opening the PNG's embedded chunk.
+- **Do** generate new **character and icon** illustrations as rasters, in the established
+  silkscreen style, on the `#013237` ground, then knock that ground out to transparent alpha
+  so the page's own grain runs behind the drawing.
+- **Do** ship every raster as **WebP q92, method 6, `alpha_quality 100`**, with the PNG
+  master versioned in `.impeccable/assets-src/` and never served.
+- **Do** keep a `.json` provenance sidecar beside every shipping raster in `public/img/`,
+  carrying the full generation prompt inline — it is the only provenance these files have.
+- **Do** let `scripts-postbuild.mjs` strip `dist/img/*.json` at build time; that is how the
+  sidecars stay findable in source and unpublished in production.
+- **Do** judge raster encoding by comparing to the master at 1:1. Grain-bearing flat art
+  scores badly on PSNR by construction.
+- **Do** build every hand-written asset URL from `import.meta.env.BASE_URL`; the site lives
+  on a subpath and Astro will not rewrite a literal string for you.
+- **Do** author a deliberate line break as separate strings joined with `<br>`, so the break
+  survives every viewport width.
+- **Do** centre an odd item in an even grid (`:last-child:nth-child(odd)`) rather than let it
+  hang at the start of a row.
 
 ### Don't:
 
@@ -516,6 +655,21 @@ collapses transitions to 0.001ms.
   expressive eyes, piped shell borders and heavy uniform outlines are raster territory —
   attempting them in code produces a worse drawing and breaks the print style.
 - **Don't** rasterise type. All type is semantic HTML/CSS, always.
+- **Don't** delete a raster's `.json` sidecar. WebP carries no embedded prompt chunk, so the
+  sidecar is the whole record and nothing recovers it.
+- **Don't** publish the sidecars either — keep the postbuild strip in `npm run build`.
+- **Don't** raise the WebP quality or switch to lossless to chase PSNR. 33–36 dB is the print
+  grain being measured, not damage; lossless costs 4.2 MB for no visible gain.
+- **Don't** hardcode a root-absolute asset path (`/img/...`, `/favicon.svg`). It works in
+  `astro dev` and 404s on GitHub Pages.
+- **Don't** give a prohibition icon a face, legs, or a wave; don't draw a kit item as a sign.
+  The two registers are how the page distinguishes an invitation from a restriction.
+- **Don't** soften the packing list back into advice. A swimsuit or rashguard is required for
+  the water, towels come from the venue, and aqua shoes are a slip precaution.
+- **Don't** restore a copy line that explains the five. The premise is carried visually now,
+  and the counts are what hold it.
+- **Don't** pad an odd set to an even count to make a grid tidy. The counts are facts.
+- **Don't** re-introduce an off-centre band. `.band--left` was deleted, not shelved.
 - **Don't** name any person in rendered output — the host included. Not in copy, a signature,
   `<title>`, meta tags, alt text, or inside a generated image.
 - **Don't** represent the five birthday people as individuals. They appear as a count and a
