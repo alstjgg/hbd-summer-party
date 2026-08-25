@@ -1,0 +1,9 @@
+{
+  "prompt": "A single character illustration, centred, on a completely flat plain background of the exact deep teal green colour #013237.\n\nThe character: an anthropomorphic NEATLY FOLDED STACK OF CLOTHES that is alive, standing upright on two thin cream legs with rounded cream feet. A folded chartreuse t-shirt rests on top of a folded bone cream garment. It has two large simple round eyes with tiny white highlights and a small curved happy mouth on the front of the stack, and two thin cream arms held out to the sides cheerfully.\n\nSTYLE: flat vector silkscreen art with VERY BOLD heavy uniform dark outlines, the weight of a screenprinted poster. No gradients, no soft shading, no drop shadows, only flat fills and a faint even print grain. Charming, quirky, confident, drawn for adults rather than for a nursery.\n\nColours, strictly and only: deep teal green background #013237, bone cream, persimmon orange, chartreuse, and very dark green-black outlines. No other colour.\n\nThe subject is CENTRED with generous empty margin on all four sides — it must not touch or be cut off by any edge. Absolutely no text, no letters, no numbers, no logos, no human faces, no border, no frame, no ground line or shadow beneath it.\n",
+  "createdAt": "2026-08-25T07:08:24.592Z",
+  "tool": "generate-image.mjs",
+  "model": "gpt-image-2",
+  "refs": [
+    "public/img/cake-hero.png"
+  ]
+}
