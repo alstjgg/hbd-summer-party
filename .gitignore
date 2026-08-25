@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+
+# Impeccable: machine-local, per-developer state (see reference/hooks.md)
+.claude/settings.local.json
+.impeccable/config.local.json
+
+# Astro
+dist/
+.astro/

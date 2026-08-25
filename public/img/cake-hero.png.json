@@ -1,0 +1,9 @@
+{
+  "prompt": "A single character illustration, centred, on a completely flat plain background of the exact deep teal green colour #013237, edge to edge, with no other scenery and NO TEXT ANYWHERE.\n\nThe character: an anthropomorphic BIRTHDAY CAKE that is alive, standing upright on two thin cream legs with rounded cream feet, its right arm raised high in a big cheerful wave with an open five-fingered hand, its left arm resting on the ring beside it. It has two large simple round eyes with tiny white highlights and a small curved happy mouth. It is a WIDE SINGLE-TIER cake in bone cream, with an elaborate piped shell border in persimmon orange running around both its top edge and its base. On top stand exactly FIVE slim bone-cream candles, evenly spaced and all identical, each with a small chartreuse flame.\n\nAround its middle it wears an INFLATABLE RING FLOAT that is oversized, fat and visibly puffy, in persimmon orange with bone cream segment bands, with soft plump segment creases, small stitch marks, and one small oval cream highlight on the tube.\n\nSTYLE: flat vector silkscreen art with VERY BOLD heavy uniform dark outlines, the weight of a screenprinted poster. No gradients, no soft shading, no drop shadows, only flat fills and a faint even print grain. Charming, quirky, confident, drawn for adults rather than for a nursery.\n\nColours, strictly and only: deep teal green background #013237, bone cream, persimmon orange, chartreuse, and very dark green-black outlines. No other colour.\n\nAbsolutely no text, no letters, no numbers, no logos, no people, no human faces, no extra objects, no border, no frame.\n",
+  "createdAt": "2026-08-25T05:06:45.501Z",
+  "tool": "generate-image.mjs",
+  "model": "gpt-image-2",
+  "refs": [
+    ".impeccable/mocks/cake-v2-deep-pool.png"
+  ]
+}

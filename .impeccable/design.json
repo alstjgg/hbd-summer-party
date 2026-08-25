@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-25T06:20:00.000Z",
+  "title": "Design System: HBD Summer Party",
+  "extensions": {
+    "colorMeta": {
+      "pool": {
+        "role": "primary",
+        "displayName": "Deep Pool Teal",
+        "canonical": "oklch(27.5% 0.046 204.1)",
+        "note": "Deliberately two steps under the approved comp’s sampled ground #013237. The print grain (overlay, opacity .62) composites over it and lifts the rendered result back to the comp value (mean delta ≤2.7/255). That rendered composite measures #013539, which is the value <meta name=\"theme-color\"> carries — the meta value matches what a viewer sees while the token stays offset under it. Do not \"correct\" this token, and do not sync theme-color to it. Flat assets with no grain over them (public/favicon.svg) carry the uncompensated #013237 instead.",
+        "tonalRamp": [
+          "#000f11",
+          "#002a2e",
+          "#1e474b",
+          "#3d656a",
+          "#5c868a",
+          "#7da7ac",
+          "#a2cdd2",
+          "#d7f5f8"
+        ]
+      },
+      "pool-deep": {
+        "role": "primary",
+        "displayName": "Pool Deep",
+        "canonical": "oklch(21.9% 0.037 206.9)",
+        "note": "One step down from the ground; used only for the closing band at the foot of the page.",
+        "tonalRamp": [
+          "#000e11",
+          "#09292d",
+          "#26454a",
+          "#446468",
+          "#638489",
+          "#84a5aa",
+          "#a9cbd0",
+          "#dbf4f7"
+        ]
+      },
+      "chartreuse": {
+        "role": "secondary",
+        "displayName": "Chartreuse",
+        "canonical": "oklch(74.1% 0.159 113.3)",
+        "note": "Display type, the hailing-port line under the character, kit item names, links, focus ring, selection, the one full-bleed colour band, the primary action fill, candle flames. 6.20:1 on the pool ground.",
+        "tonalRamp": [
+          "#0e0c00",
+          "#282700",
+          "#424500",
+          "#606500",
+          "#7f8600",
+          "#9fa800",
+          "#c5ce42",
+          "#eef79e"
+        ]
+      },
+      "persimmon": {
+        "role": "tertiary",
+        "displayName": "Persimmon",
+        "canonical": "oklch(63.9% 0.155 51.1)",
+        "note": "NON-TEXT TOKEN. 3.89:1 on the ground. The ring and the candle stripes only — never type, and never as a fill under cream text (2.25:1, banned).",
+        "tonalRamp": [
+          "#290000",
+          "#560000",
+          "#791400",
+          "#9d3a00",
+          "#c25c00",
+          "#e87e37",
+          "#ffa460",
+          "#ffdaac"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Bone Cream",
+        "canonical": "oklch(85.0% 0.074 85.5)",
+        "note": "All body copy, Korean display headings, cake body and ring bands. Mixed down with the ground for hairlines (26%/18%) and quiet notes (78%/72%). 8.78:1.",
+        "tonalRamp": [
+          "#150800",
+          "#342000",
+          "#513c02",
+          "#715a27",
+          "#917a47",
+          "#b39b68",
+          "#dac18c",
+          "#feedc7"
+        ]
+      },
+      "outline": {
+        "role": "neutral",
+        "displayName": "Outline Ink",
+        "canonical": "oklch(23.3% 0.023 165.9)",
+        "note": "The drawing ink that outlines every character and the action pill. 1.20:1 on the ground — never a text colour.",
+        "tonalRamp": [
+          "#050d0a",
+          "#192821",
+          "#35443d",
+          "#52625b",
+          "#71827a",
+          "#92a39b",
+          "#b7c9c1",
+          "#e5f2ec"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Poster Display (Anton)",
+        "purpose": "The poster voice, at exactly three sizes: banner title (capped 13svh), date lockup (capped 15svh), closing line. Always chartreuse, always nowrap, sized against svh as well as vw."
+      },
+      "headline": {
+        "displayName": "Korean Display XL (Black Han Sans)",
+        "purpose": "The two loudest Korean section openers."
+      },
+      "title": {
+        "displayName": "Korean Display (Black Han Sans)",
+        "purpose": "Quieter Korean section headings; the same face steps down for the action label. The hailing-port line shares the face but is its own ramp step (venue)."
+      },
+      "body": {
+        "displayName": "Body (Gothic A1)",
+        "purpose": "All running copy, held to a 34rem measure, keep-all wrapping for Korean."
+      },
+      "label": {
+        "displayName": "Tracked Label (Gothic A1 700)",
+        "purpose": "Definition terms in the facts rows. The only tracked-out small type in the system — never a kicker above a heading."
+      },
+      "note": {
+        "displayName": "Quiet Note (--fs-note)",
+        "purpose": "Secondary notes on both the pool bands and the chartreuse fill band. Merged from a 0.95rem/0.92rem near-duplicate pair."
+      },
+      "ko-md": {
+        "displayName": "Korean Medium (--fs-ko-md)",
+        "purpose": "Kit item names and the loud note on the fill band."
+      },
+      "ko-sm": {
+        "displayName": "Korean Small (--fs-ko-sm)",
+        "purpose": "The closing Korean line under the poster lockup."
+      },
+      "fact": {
+        "displayName": "Fact Value (--fs-fact)",
+        "purpose": "The bold values in the facts definition rows."
+      },
+      "venue": {
+        "displayName": "Hailing Port (--fs-venue)",
+        "purpose": "The venue line under the character, in chartreuse — corrected from a small cream line after measuring the comp, which sets it at 91.7% of frame width."
+      },
+      "close": {
+        "displayName": "Closing Lockup (--fs-close)",
+        "purpose": "The closing poster line at the foot of the page."
+      }
+    },
+    "shadows": [],
+    "shadowPhilosophy": "None. No box-shadow, gradient, blur, or backdrop-filter exists in the built stylesheet. Depth comes from flat band colour changes, 2px cream-mix hairlines, and the full-sheet print grain.",
+    "texture": [
+      {
+        "name": "print-grain",
+        "value": "position: fixed; inset: 0; z-index: 90; pointer-events: none; background-image: url(<inline SVG feTurbulence fractalNoise, baseFrequency 0.9, numOctaves 4, desaturated>); opacity: .62; mix-blend-mode: overlay;",
+        "purpose": "The system’s only texture, applied on body::after over the entire sheet. The --pool token is calibrated around it; changing one requires re-deriving the other."
+      }
+    ],
+    "motion": [
+      {
+        "name": "float-bob",
+        "value": "translateY(0 → -1.4%) with ±0.35deg rotation, 5.2s ease-in-out infinite",
+        "purpose": "The page’s one motion moment: the hero character bobbing in its ring. Nothing else animates idly."
+      },
+      {
+        "name": "state-transition",
+        "value": "transform 180ms ease, background-color 180ms ease",
+        "purpose": "The action’s hover/active response. The only transition in the system."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition-duration: 0.001ms !important",
+        "purpose": "Global kill switch under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "kit-columns",
+        "value": "40rem",
+        "purpose": "Packing-kit items go from one column to three."
+      },
+      {
+        "name": "wide-landscape",
+        "value": "64rem (orientation: landscape)",
+        "purpose": "Rule-of-Five band splits into two columns; poster tightens its gap; the character takes min(46vw, 46rem) wide by min(46svh, 46rem) tall; bands widen inline padding."
+      },
+      {
+        "name": "short-landscape",
+        "value": "max-height: 34rem (orientation: landscape)",
+        "purpose": "Poster drops its 100svh floor and the art caps at 46svh so the date cannot be pushed off-screen."
+      }
+    ],
+    "typeRamp": [
+      {
+        "name": "--fs-note",
+        "value": "0.95rem",
+        "purpose": "Quiet secondary notes, both bands."
+      },
+      {
+        "name": "--fs-ko-md",
+        "value": "clamp(1.15rem, 5vw, 1.9rem)",
+        "purpose": "Kit names and the loud note."
+      },
+      {
+        "name": "--fs-ko-sm",
+        "value": "clamp(1.05rem, 4.8vw, 1.5rem)",
+        "purpose": "Closing Korean line."
+      },
+      {
+        "name": "--fs-fact",
+        "value": "clamp(1.02rem, 4vw, 1.25rem)",
+        "purpose": "Fact values."
+      },
+      {
+        "name": "--fs-venue",
+        "value": "clamp(0.95rem, 6vw, 2.6rem)",
+        "purpose": "The hailing-port line."
+      },
+      {
+        "name": "--fs-close",
+        "value": "clamp(2.4rem, 15vw, 9rem)",
+        "purpose": "Closing lockup."
+      }
+    ],
+    "knownGaps": [
+      {
+        "name": "Display face width class",
+        "body": "The comp's title face sets HBD SUMMER PARTY at 94.6% of frame width with a 277px cap (18.0% of frame height) — roughly 1:4.5 glyph proportions, an ultra-compressed poster gothic. Anton, the shipped face, sets the same string at 87.5% width with a 93px cap and is roughly 2.75x wider per glyph. That is why the title clamps small against its svh cap and why the first viewport's vertical fill sits at ~72–76% against the comp's 97.5%. Only a genuinely compressed face closes this; tracking, font-stretch and transform: scaleX() each fail differently (see The Width Class Rule)."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "The Action",
+      "kind": "button",
+      "refersTo": "action",
+      "description": "The page’s single interactive element (the venue map link). Chartreuse fill, pool text, 3px outline, full pill.",
+      "html": "<a class=\"ds-action\" href=\"#\">지도 열기 <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a>",
+      "css": ".ds-action { display: inline-flex; align-items: center; gap: .6rem; padding: 1.1rem 2.1rem; border: 3px solid var(--outline, #13211b); border-radius: 999px; background: var(--chartreuse, #acb51c); color: var(--pool, #012e32); font-family: var(--poster-ko, 'Black Han Sans', Anton, sans-serif); font-size: clamp(1rem, 4.2vw, 1.2rem); letter-spacing: -.01em; text-decoration: none; transition: transform 180ms ease, background-color 180ms ease; } .ds-action svg { width: 1.05em; height: 1.05em; flex: none; transition: transform 180ms ease; } .ds-action:hover { background: var(--cream, #e4cb96); transform: translateY(-2px); } .ds-action:hover svg { transform: translateX(3px); } .ds-action:active { transform: translateY(0); } .ds-action:focus-visible { outline: 3px solid var(--chartreuse, #acb51c); outline-offset: 4px; border-radius: 999px; }"
+    },
+    {
+      "name": "Five Marks",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The signature Rule-of-Five motif: one candle shape defined once and placed with <use> five times, so the five are equal by construction.",
+      "html": "<div class=\"ds-five\" role=\"img\" aria-label=\"똑같은 초 다섯 개\"><svg viewBox=\"0 0 236 68\" aria-hidden=\"true\" focusable=\"false\"><defs><g id=\"ds-candle\"><path d=\"M10 4c3.4 3.6 5.4 6.6 5.4 9.4 0 3.3-2.4 5.6-5.4 5.6s-5.4-2.3-5.4-5.6C4.6 10.6 6.6 7.6 10 4Z\" class=\"ds-flame\" stroke-width=\"2.4\" stroke-linejoin=\"round\"></path><path d=\"M10 19v4\" class=\"ds-ink\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path><rect x=\"3.2\" y=\"23\" width=\"13.6\" height=\"41\" rx=\"4\" class=\"ds-body\" stroke-width=\"2.4\"></rect><path d=\"M4.4 38h11.2M4.4 50h11.2\" class=\"ds-stripe\" stroke-width=\"2.4\" stroke-linecap=\"round\"></path></g></defs><use href=\"#ds-candle\" x=\"0\" y=\"0\"></use><use href=\"#ds-candle\" x=\"54\" y=\"0\"></use><use href=\"#ds-candle\" x=\"108\" y=\"0\"></use><use href=\"#ds-candle\" x=\"162\" y=\"0\"></use><use href=\"#ds-candle\" x=\"216\" y=\"0\"></use></svg></div>",
+      "css": ".ds-five { display: flex; justify-content: center; padding: 2rem; background: var(--pool, #012e32); } .ds-five svg { width: min(15rem, 62vw); height: auto; overflow: visible; } .ds-five .ds-flame { fill: var(--chartreuse, #acb51c); stroke: var(--outline, #13211b); } .ds-five .ds-ink { fill: none; stroke: var(--outline, #13211b); } .ds-five .ds-body { fill: var(--cream, #e4cb96); stroke: var(--outline, #13211b); } .ds-five .ds-stripe { fill: none; stroke: var(--persimmon, #d36b1e); }"
+    },
+    {
+      "name": "Poster Lockup",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The first viewport's type: chartreuse Anton capitals tracked across the top, the date at display scale, and the chartreuse hailing-port line beneath. Both poster lines are unbreakable and capped in svh so the fold's height budget holds.",
+      "html": "<div class=\"ds-poster\"><h1 class=\"ds-poster__title\">HBD SUMMER PARTY</h1><p class=\"ds-poster__when\">8.28 <span>17:00</span></p><p class=\"ds-poster__where\">어반피크닉 워터파티룸 · 분당서현</p></div>",
+      "css": ".ds-poster { display: grid; justify-items: center; gap: clamp(.9rem, 3.2vw, 1.6rem); padding: clamp(.9rem, 3.5vw, 2rem) clamp(1.25rem, 6vw, 3rem); text-align: center; background: var(--pool, #012e32); } .ds-poster__title, .ds-poster__when { margin: 0; font-family: var(--poster, Anton, 'Black Han Sans', Impact, sans-serif); font-weight: 400; line-height: .86; text-transform: uppercase; color: var(--chartreuse, #acb51c); letter-spacing: .005em; white-space: nowrap; } .ds-poster__title { font-size: min(clamp(1.6rem, 11.6vw, 13rem), 13svh); } .ds-poster__when { font-size: min(clamp(2.6rem, 18.6vw, 20rem), 15svh); } .ds-poster__when span { margin-left: .04em; } .ds-poster__where { margin: 0; font-family: var(--poster-ko, 'Black Han Sans', Anton, sans-serif); font-size: var(--fs-venue, clamp(.95rem, 6vw, 2.6rem)); line-height: 1.3; letter-spacing: -.01em; color: var(--chartreuse, #acb51c); }"
+    },
+    {
+      "name": "Rule Band",
+      "kind": "card",
+      "refersTo": "band-rule",
+      "description": "The default section container: full-bleed pool ground, cream text, a single 2px cream-mix hairline across the top. There are no cards in this system — this is the container grammar.",
+      "html": "<section class=\"ds-band-rule\"><h2 class=\"ds-band-rule__h\">8월 28일 금요일, 오후 다섯 시</h2><p class=\"ds-band-rule__p\">실내 워터파티룸이에요. 저녁에 모였다가 그날 헤어집니다.</p></section>",
+      "css": ".ds-band-rule { padding: clamp(3.5rem, 13vw, 6.5rem) clamp(1.25rem, 6vw, 3rem); text-align: center; background: var(--pool, #012e32); color: var(--cream, #e4cb96); border-top: 2px solid color-mix(in srgb, var(--cream, #e4cb96) 26%, transparent); } .ds-band-rule__h { margin: 0; font-family: var(--poster-ko, 'Black Han Sans', Anton, sans-serif); font-weight: 400; font-size: clamp(1.75rem, 7.4vw, 3.4rem); line-height: 1.25; letter-spacing: -.02em; color: var(--cream, #e4cb96); } .ds-band-rule__p { margin: 1.75rem 0 0; font-family: var(--body, 'Gothic A1', 'Apple SD Gothic Neo', system-ui, sans-serif); font-size: var(--fs-note, .95rem); line-height: 1.85; color: color-mix(in srgb, var(--cream, #e4cb96) 78%, var(--pool, #012e32)); }"
+    },
+    {
+      "name": "Fill Band",
+      "kind": "card",
+      "refersTo": "band-fill",
+      "description": "The one colour-block on the page: chartreuse ground with pool text throughout (6.20:1). Quiet notes are mixed down toward the fill at pool 90% (5.54:1) — the earlier 78% measured 4.35:1 and failed the body floor.",
+      "html": "<section class=\"ds-band-fill\"><h2 class=\"ds-band-fill__h\">세 가지만 챙기면 돼요</h2><p class=\"ds-band-fill__note\">한 장이면 충분해요</p><p class=\"ds-band-fill__note ds-band-fill__note--loud\">풀이 작아요. 짐은 가볍게!</p></section>",
+      "css": ".ds-band-fill { padding: clamp(3.5rem, 13vw, 6.5rem) clamp(1.25rem, 6vw, 3rem); text-align: center; background: var(--chartreuse, #acb51c); color: var(--pool, #012e32); } .ds-band-fill__h { margin: 0; font-family: var(--poster-ko, 'Black Han Sans', Anton, sans-serif); font-weight: 400; font-size: clamp(2.05rem, 8.6vw, 4.6rem); line-height: 1.15; letter-spacing: -.02em; color: var(--pool, #012e32); } .ds-band-fill__note { margin: 1.75rem 0 0; font-size: var(--fs-note, .95rem); line-height: 1.85; color: color-mix(in srgb, var(--pool, #012e32) 90%, var(--chartreuse, #acb51c)); } .ds-band-fill__note--loud { font-family: var(--poster-ko, 'Black Han Sans', Anton, sans-serif); font-size: var(--fs-ko-md, clamp(1.15rem, 5vw, 1.9rem)); letter-spacing: -.01em; color: var(--pool, #012e32); }"
+    },
+    {
+      "name": "Facts List",
+      "kind": "list-item",
+      "refersTo": null,
+      "description": "Date / time / venue as hairline-ruled definition rows: a tracked uppercase term column at 4.5rem, bold values, baseline-aligned.",
+      "html": "<dl class=\"ds-facts\"><div class=\"ds-facts__row\"><dt>날짜</dt><dd>2026년 8월 28일 <span class=\"ds-facts__dim\">금요일</span></dd></div><div class=\"ds-facts__row\"><dt>시간</dt><dd>오후 5시</dd></div><div class=\"ds-facts__row\"><dt>장소</dt><dd>어반피크닉 워터파티룸 분당서현점</dd></div></dl>",
+      "css": ".ds-facts { margin: 0 auto; padding: 2rem 1rem; max-width: 34rem; text-align: left; background: var(--pool, #012e32); font-family: var(--body, 'Gothic A1', 'Apple SD Gothic Neo', system-ui, sans-serif); } .ds-facts__row { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1rem; align-items: baseline; padding: .9rem 0; border-bottom: 2px solid color-mix(in srgb, var(--cream, #e4cb96) 18%, transparent); } .ds-facts__row:first-child { border-top: 2px solid color-mix(in srgb, var(--cream, #e4cb96) 18%, transparent); } .ds-facts dt { font-weight: 700; font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; color: color-mix(in srgb, var(--cream, #e4cb96) 82%, var(--pool, #012e32)); } .ds-facts dd { margin: 0; font-weight: 700; font-size: var(--fs-fact, clamp(1.02rem, 4vw, 1.25rem)); line-height: 1.5; color: var(--cream, #e4cb96); } .ds-facts__dim { color: color-mix(in srgb, var(--cream, #e4cb96) 72%, var(--pool, #012e32)); }"
+    },
+    {
+      "name": "Close Band",
+      "kind": "custom",
+      "refersTo": "close-band",
+      "description": "The foot of the page: the darker pool-deep ground, the closing poster line, and the five marks again.",
+      "html": "<footer class=\"ds-close\"><p class=\"ds-close__line\">See you<br>at the water</p><p class=\"ds-close__ko\">8월 28일, 물가에서 만나요</p></footer>",
+      "css": ".ds-close { padding: clamp(4rem, 15vw, 8rem) clamp(1.25rem, 6vw, 3rem) clamp(3rem, 11vw, 5rem); text-align: center; background: var(--pool-deep, #001f23); border-top: 2px solid color-mix(in srgb, var(--cream, #e4cb96) 26%, transparent); } .ds-close__line { margin: 0; font-family: var(--poster, Anton, 'Black Han Sans', Impact, sans-serif); font-weight: 400; text-transform: uppercase; letter-spacing: .01em; color: var(--chartreuse, #acb51c); font-size: var(--fs-close, clamp(2.4rem, 15vw, 9rem)); line-height: 1.02; } .ds-close__ko { margin: 1.5rem 0 0; font-family: var(--poster-ko, 'Black Han Sans', Anton, sans-serif); font-size: var(--fs-ko-sm, clamp(1.05rem, 4.8vw, 1.5rem)); letter-spacing: -.01em; color: var(--cream, #e4cb96); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Deep Pool Screenprint",
+    "overview": "This is a silkscreened character poster that happens to be a web page. One anthropomorphic birthday cake stands in an oversized persimmon ring, waving, at the middle of the first viewport; chartreuse poster capitals run across the top and the date sits huge underneath it. The page refuses the centred e-invite stack of photograph, date, share button. There is no card, no panel, no elevation and no gradient anywhere in it — colour arrives as flat screen fills over a single drenched ground, and the only depth in the system is a print grain laid over the whole sheet.\n\nThe system is drenched, not accented. The page IS deep teal; teal is not a highlight applied to a neutral document. Everything else in the palette is a flat ink printed onto that ground. The character illustrations carry heavy uniform dark outlines and the CSS carries the same weight (--stroke: 3px), so drawn shapes and coded shapes read as one printing job.\n\nIt is one surface, built once, for one evening. There is no component library here and this record does not pretend otherwise: what is documented is the set of durable rules the single page actually establishes — the palette and its contrast law, a named type ramp, a band-based vertical rhythm, one pill action, and one repeated five-mark motif. The system’s hardest constraints are not visual preferences but product law: nobody is named, the five appear only as a count, and nothing on the page collects a response.",
+    "keyCharacteristics": [
+      "Drenched deep-teal ground; flat silkscreen fills; no gradients, no shadows, no glass.",
+      "Very heavy uniform outlines (3px) shared by illustration and interface.",
+      "Round-only geometry: pills and full-bleed bands; no sharp-cornered containers.",
+      "A print grain over the entire sheet, which the base palette is calibrated around.",
+      "Two display faces (Latin poster + Korean poster) over one quiet Korean body face.",
+      "Exactly five, everywhere five appears — equality by construction, not by care.",
+      "One motion moment on the whole page."
+    ],
+    "rules": [
+      {
+        "name": "The Drenched Ground Rule",
+        "body": "The page is the teal. Never re-stage this system as a light or neutral document with teal accents; a white or off-white page background is outside the world.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grain Offset Rule",
+        "body": "--pool is #012e32, two steps under the approved comp’s sampled ground of #013237, and this is deliberate. The print grain (body::after, mix-blend-mode: overlay, opacity: .62) composites over the whole sheet and lifts the result, so the RENDERED ground measures the comp’s value — verified at a mean delta of ≤2.7/255, not by eye. Do not \"correct\" the token to #013237. It looks like a typo and it is not; changing it makes the shipped page lighter than the approved comp. If the grain layer’s opacity, blend mode, or presence ever changes, --pool must be re-derived against the comp — the two values are one calibration, not two independent decisions. That rendered composite measures #013539, and #013539 is what <meta name=\"theme-color\"> carries: the meta value must match what a viewer actually sees, while the token stays offset under it to pay for the grain. The two differing is the calibration working, not a drift. Never sync theme-color to --pool.",
+        "section": "colors"
+      },
+      {
+        "name": "The Uncompensated Asset Rule",
+        "section": "colors",
+        "body": "The downward offset exists only because the grain composites on top. An asset that renders with no grain over it carries the uncompensated sampled ground instead: public/favicon.svg hardcodes #013237, and that is correct, not a token bypass. Anything outside the page’s grain layer — the favicon, an exported still, a printed sheet — uses #013237; anything under the grain uses --pool. \"Fixing\" the favicon to the token would ship a mark visibly darker than the page it stands for."
+      },
+      {
+        "name": "The Non-Text Persimmon Rule",
+        "body": "Persimmon is a non-text token. It measures 3.89:1 on the ground, below the body-text floor, and it is reserved for material: the ring, the candle stripes, piped shell borders. Never set copy, a heading, a label, or a link in persimmon, and never rely on it to carry meaning that only colour expresses.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Legible Pairing Rule",
+        "body": "The primary action is a chartreuse fill with pool-coloured text (6.20:1) — the only pairing in this palette that clears body contrast on a fill. Cream text on a persimmon fill measures 2.25:1 and is banned outright, at every size. Body copy is cream or chartreuse on the teal ground, and nothing else. Notes mixed down toward a fill obey the same floor and are measured, never eyeballed: the quiet notes on the chartreuse band were color-mix(in srgb, var(--pool) 78%, var(--chartreuse)) at 4.35:1 — under the 4.5:1 body floor — and were corrected to 90% (5.54:1).",
+        "section": "colors"
+      },
+      {
+        "name": "The Measured Comp Rule",
+        "section": "colors",
+        "body": "The approved comp (.impeccable/mocks/cake-v2-deep-pool.png) is the authority, and it is authoritative only when MEASURED — never as remembered, and never as paraphrased in a prose brief. The hailing-port line shipped cream at roughly a third of frame width because the written record of the comp called it \"small at the foot\"; measuring the comp file showed it chartreuse at 91.7% of frame width, and the build was corrected to chartreuse at --fs-venue. When code and a written description of the comp disagree, re-measure the comp; the prose loses."
+      },
+      {
+        "name": "The Two Poster Faces Rule",
+        "body": "Latin display is Anton; Korean display is Black Han Sans. They are peers, not fallbacks for each other — never set a Korean heading in Anton or a Latin poster line in Black Han Sans, and never introduce a third display face.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "No kicker, eyebrow, or small tracked label above a heading. Ever. The .kicker rule was written into Base.astro during the build, used, and then deliberately deleted so it cannot return by habit; its absence from the stylesheet is intentional and load-bearing. The heading carries its own weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Unbroken Line Rule",
+        "body": "The banner title and the date are white-space: nowrap and size against viewport height as well as width (min(clamp(...), Nsvh)). They may shrink; they may not wrap.",
+        "section": "typography"
+      },
+      {
+        "name": "The Named Step Rule",
+        "section": "typography",
+        "body": "A size used more than once is an --fs-* token in Base.astro, never a literal at the call site. New work reuses a step or adds one deliberately; it never introduces a near-duplicate — a 0.92rem beside the 0.95rem note, or a second clamp that differs only in its max. The ramp is exactly as long as the surface needs, and it currently needs six steps beyond the five roles."
+      },
+      {
+        "name": "The Width Class Rule",
+        "section": "typography",
+        "body": "The display-face gap is a FACE problem and only a face closes it. Do not simulate compression. Negative tracking collapses counters and jams sidebearings long before it buys meaningful width; font-stretch is inert on Anton, which ships a single width the browser will not synthesise from; transform: scaleX() thins the vertical stems while leaving horizontals at full weight, which breaks the uniform-stroke logic the entire world runs on. Until a compressed face ships, the title stays honest at Anton’s proportions."
+      },
+      {
+        "name": "The Centred-Except-Once Rule",
+        "body": "The page is centre-aligned; exactly one band breaks alignment (the Rule-of-Five section, left-aligned, with its five marks pushed to flex-start). One deliberate break reads as intent; three read as inconsistency.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Print Rule",
+        "body": "Depth is a change of ink, not a change of altitude. If a new element needs to separate from its surroundings, it gets a different flat band colour, a hairline, or an outline — never a shadow, never a gradient, never a translucent panel.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Uniform Stroke Rule",
+        "body": "The outline weight never thins. --stroke is 3px at every viewport size, and character outlines are heavy and uniform by construction. A hairline is not a thin outline — it is a different device with a different colour, and the two are never substituted for each other.",
+        "section": "shapes"
+      },
+      {
+        "name": "The No Container Rule",
+        "body": "This world has no cards, tiles, or panels. A group of content is established by a band (full-bleed colour or hairline-topped), never by a bordered box.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Rule of Five",
+        "body": "Five is a product premise, not a visual flourish — five candles on the hero cake, five marks in the motif. A build that ships four has shipped a different design. The marks are authored as one shape used five times precisely so the equality is true by construction rather than by care: no instance can drift, be emphasised, or be styled apart. Never differentiate one of the five — not by size, colour, order, animation, or position.",
+        "section": "components"
+      },
+      {
+        "name": "The One Moment Rule",
+        "body": "The page authors exactly one motion moment: the hero character’s float-bob — a 5.2s ease-in-out infinite loop of translateY(0 → -1.4%) with a ±0.35° rotation, because an inflatable ring does not sit still on water. Everything else is state response only. The five marks deliberately carry no idle animation. Do not add a second ambient loop, scroll-triggered reveals, or scattered hover effects.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep the ground drenched: --pool is the page, and --pool-deep is the only other ground colour, reserved for the foot.",
+      "Do leave --pool at #012e32. The grain layer lifts it to the comp’s #013237 when rendered (mean delta ≤2.7/255). Re-derive it only if the grain changes.",
+      "Do keep theme-color at the rendered ground #013539 and flat, grain-free assets (the favicon) at the sampled ground #013237. Three values, one calibration.",
+      "Do name every size that repeats as an --fs-* token in Base.astro and consume it by name at the call site.",
+      "Do measure the comp file before correcting fidelity. The hailing-port line was cream and small because a prose summary said so; the comp said chartreuse at 91.7% of frame width.",
+      "Do keep the print grain over the whole sheet — fixed, opacity: .62, mix-blend-mode: overlay, z-index: 90, pointer-events: none. It is the system’s only texture and half of the palette calibration.",
+      "Do use chartreuse fill with pool text (6.20:1) for any action.",
+      "Do keep every outline at --stroke: 3px in --outline so coded shapes match the drawn ones.",
+      "Do hold running copy to the 34rem measure and keep word-break: keep-all for Korean.",
+      "Do keep the count at exactly five wherever five appears, and author repeated equal shapes as one <use> repeated, so equality cannot drift.",
+      "Do draw new flat, countable shape systems (marks, icons, rules) as authored SVG in code, inline, stroked with the palette’s custom properties.",
+      "Do generate new character illustrations as rasters in public/img/, in the established silkscreen style, on the #013237 ground, each with its .png.json provenance sidecar carrying the full generation prompt inline alongside model, post-processing and reference comp — readable without opening the PNG’s embedded chunk."
+    ],
+    "donts": [
+      "Don’t \"fix\" --pool to #013237. It looks like a typo; it is a calibration, and correcting it ships a page lighter than the approved comp.",
+      "Don’t \"fix\" public/favicon.svg’s #013237 to the --pool token. Nothing composites grain over a favicon, so the flat asset carries the uncompensated value on purpose.",
+      "Don’t set theme-color to the token value. It carries #013539, what a viewer sees.",
+      "Don’t fake a compressed display face with tracking, font-stretch, or transform: scaleX(). Each fails differently and all three break the uniform stroke.",
+      "Don’t add a near-duplicate size beside an existing --fs-* step.",
+      "Don’t set text in --persimmon (3.89:1) or --outline (1.20:1) on the ground. Persimmon is for the ring, the candle stripes, and other material only.",
+      "Don’t put cream text on a persimmon fill — 2.25:1, banned at every size. And don’t build a persimmon action; the action is chartreuse.",
+      "Don’t add a kicker, eyebrow, or tracked label above any heading. The .kicker rule was deliberately removed from the stylesheet; do not reintroduce it.",
+      "Don’t introduce shadows, gradients, glass, blur, or any elevation. Depth is a change of ink.",
+      "Don’t add cards, tiles, or sharp-cornered boxes. Bands and pills only.",
+      "Don’t add a second ambient animation. The hero bob is the page’s one motion moment; the five marks stay still on purpose.",
+      "Don’t flatten a character illustration into CSS or hand-authored SVG. Figure drawing, expressive eyes, piped shell borders and heavy uniform outlines are raster territory — attempting them in code produces a worse drawing and breaks the print style.",
+      "Don’t rasterise type. All type is semantic HTML/CSS, always.",
+      "Don’t name any person in rendered output — the host included. Not in copy, a signature, <title>, meta tags, alt text, or inside a generated image.",
+      "Don’t represent the five birthday people as individuals. They appear as a count and a motif only: no initials, monograms, photos, or placeholder avatars.",
+      "Don’t add an RSVP affordance of any kind — no form, no headcount, no share button, no calendar link. The map link is the page’s only outbound action.",
+      "Don’t build a post-event state. The site is disposable: no archive, no past-tense mode, no recap, no \"thanks for coming\" screen.",
+      "Don’t invent facts to fill space — no street address, transit detail, phone number, rain plan, or second date. Absent facts stay visibly absent."
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#013539" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image" content="/img/cake-hero.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700&display=swap"
+    />
+    <link rel="preload" as="image" href="/img/cake-hero.png" />
+  </head>
+  <body>
+    <!--
+    THESIS: The invitation is a screenprinted character poster — one birthday cake,
+    alive, standing in an oversized pool ring, waving. It refuses the centred e-invite
+    stack of photograph, date, share button.
+    OWN-WORLD: Drenched deep teal #013237. Flat silkscreen fills in chartreuse, bone
+    cream and persimmon; very heavy uniform dark outlines; everything round, no sharp
+    corners; a faint print grain over all of it. No gradients, no shadows, no elevation.
+    STORY: A friend who already said yes meets the cake, reads 8.28 and 17:00, and
+    leaves knowing the port and that a swimsuit, a towel and dry clothes come too.
+    FIRST VIEWPORT: Chartreuse HBD SUMMER PARTY tracked across the top; the cake
+    character in its persimmon ring filling the middle; 8.28 17:00 in chartreuse at
+    display scale; the Korean venue line in chartreuse at near-full measure
+    across the foot, as the comp sets it.
+    FORM: Deep Pool, the One Big Cake composition, approved comp
+    .impeccable/mocks/cake-v2-deep-pool.png; seed 889aede8.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish
+    review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+    -->
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* ---------------------------------------------------------------
+     DEEP POOL — tokens sampled from the approved comp, not estimated.
+     .impeccable/mocks/cake-v2-deep-pool.png
+     --------------------------------------------------------------- */
+  :root {
+    /* The comp's ground samples #013237. The print grain sits over it at
+       overlay at opacity .62, which lifts the composite, so the base token is
+       set two steps under the sample and the RENDERED ground measures the
+       comp's value (#013539 rendered vs #013137 sampled — within 3/255).
+       Verified against .impeccable/review/hero-repro.png, not by eye.
+       Do NOT "correct" this to #013237: that breaks the match. If the grain
+       layer changes, re-derive this offset by measuring, not by reasoning. */
+    --pool: #012e32;
+    --pool-deep: #001f23; /* one step down, for the foot of the page */
+    --chartreuse: #acb51c; /* display type + primary action fill  6.20:1 */
+    --cream: #e4cb96; /* body copy, cake body, ring bands        8.78:1 */
+    --persimmon: #d36b1e; /* the ring and the candle stripes. 3.89:1 on pool,
+                             so this token is NON-TEXT ONLY — never type. */
+    --outline: #13211b; /* every character outline; never text on pool */
+
+    --poster: 'Anton', 'Black Han Sans', Impact, sans-serif;
+    --poster-ko: 'Black Han Sans', 'Anton', sans-serif;
+    --body: 'Gothic A1', 'Apple SD Gothic Neo', system-ui, sans-serif;
+
+    /* Type ramp — every step used on this surface is named here. Sizes that
+       differed by hundredths across sections have been merged; a step exists
+       only where a role genuinely needs one. */
+    --fs-note: 0.95rem; /* quiet notes, both bands */
+    --fs-ko-md: clamp(1.15rem, 5vw, 1.9rem); /* kit names, loud note */
+    --fs-ko-sm: clamp(1.05rem, 4.8vw, 1.5rem); /* closing Korean line */
+    --fs-fact: clamp(1.02rem, 4vw, 1.25rem); /* fact values */
+    --fs-venue: clamp(0.95rem, 6vw, 2.6rem); /* the hailing-port line */
+    --fs-close: clamp(2.4rem, 15vw, 9rem); /* closing lockup */
+
+    --stroke: 3px; /* the signature outline weight; never thins */
+    --gutter: clamp(1.25rem, 6vw, 3rem);
+    --measure: 34rem;
+
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--pool);
+    color: var(--cream);
+    font-family: var(--body);
+    font-weight: 400;
+    font-size: clamp(1.02rem, 3.7vw, 1.18rem);
+    line-height: 1.85;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* Print grain over the whole sheet — the comp's fills are not pure flat. */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    background-image: var(--grain);
+    opacity: 0.62;
+    mix-blend-mode: overlay;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  p,
+  ul,
+  li,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: var(--chartreuse);
+    text-underline-offset: 0.28em;
+    text-decoration-thickness: 2px;
+  }
+
+  :focus-visible {
+    outline: var(--stroke) solid var(--chartreuse);
+    outline-offset: 4px;
+    border-radius: 999px;
+  }
+
+  ::selection {
+    background: var(--chartreuse);
+    color: var(--pool);
+  }
+
+  /* --- shared type roles ------------------------------------------------ */
+
+  .poster {
+    font-family: var(--poster);
+    font-weight: 400;
+    line-height: 0.86;
+    text-transform: uppercase;
+    color: var(--chartreuse);
+    letter-spacing: 0.01em;
+  }
+
+  .ko-display {
+    font-family: var(--poster-ko);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    font-size: clamp(1.75rem, 7.4vw, 3.4rem);
+  }
+
+  .ko-display--xl {
+    font-size: clamp(2.05rem, 8.6vw, 4.6rem);
+    line-height: 1.15;
+  }
+
+  .lede {
+    max-width: var(--measure);
+    margin-inline: auto;
+    color: var(--cream);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+</style>

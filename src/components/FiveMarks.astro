@@ -1,0 +1,70 @@
+---
+/**
+ * The Rule of Five, authored as flat SVG — five identical candles.
+ * Countable flat shapes, so this is code, not a raster (see the surface brief's
+ * media table). Every candle is drawn from the same <use>, which is the point:
+ * the premise is that no one of the five is more prominent than the others, and
+ * a single source shape makes that true by construction rather than by care.
+ */
+interface Props {
+  label: string;
+  class?: string;
+}
+const { label, class: className = '' } = Astro.props;
+---
+
+<div class={`five ${className}`} role="img" aria-label={label}>
+  <svg viewBox="0 0 236 68" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="candle">
+        <!-- flame -->
+        <path
+          d="M10 4c3.4 3.6 5.4 6.6 5.4 9.4 0 3.3-2.4 5.6-5.4 5.6s-5.4-2.3-5.4-5.6C4.6 10.6 6.6 7.6 10 4Z"
+          fill="var(--chartreuse)"
+          stroke="var(--outline)"
+          stroke-width="2.4"
+          stroke-linejoin="round"></path>
+        <!-- wick -->
+        <path d="M10 19v4" stroke="var(--outline)" stroke-width="2.4" stroke-linecap="round"></path>
+        <!-- body -->
+        <rect
+          x="3.2"
+          y="23"
+          width="13.6"
+          height="41"
+          rx="4"
+          fill="var(--cream)"
+          stroke="var(--outline)"
+          stroke-width="2.4"></rect>
+        <!-- stripe -->
+        <path
+          d="M4.4 38h11.2M4.4 50h11.2"
+          stroke="var(--persimmon)"
+          stroke-width="2.4"
+          stroke-linecap="round"></path>
+      </g>
+    </defs>
+    <use href="#candle" x="0" y="0"></use>
+    <use href="#candle" x="54" y="0"></use>
+    <use href="#candle" x="108" y="0"></use>
+    <use href="#candle" x="162" y="0"></use>
+    <use href="#candle" x="216" y="0"></use>
+  </svg>
+</div>
+
+<style>
+  .five {
+    display: flex;
+    justify-content: center;
+  }
+
+  .five svg {
+    width: min(15rem, 62vw);
+    height: auto;
+    overflow: visible;
+  }
+
+  /* No idle animation here by design. The page authors one moment — the hero
+     bob — and the craft floor asks for one, not three. The five stay equal by
+     construction anyway: they are the same <use> five times. */
+</style>

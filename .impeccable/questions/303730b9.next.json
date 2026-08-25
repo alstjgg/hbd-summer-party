@@ -1,0 +1,235 @@
+{
+  "title": "Choose the visual world — HBD Summer Party",
+  "question": "Your brief pins maritime, so every card here lives inside it. No image generation exists on this machine, so this round is code-led: cards carry their identity in palette and facts, not comps. The roll assigned Stern Letters. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Stern Letters",
+      "kicker": "THE ROLL",
+      "lineage": "gold-leaf transom lettering on a wooden boat's stern",
+      "thesis": "The invitation is the boat's own nameboard — the name gilded over its hailing port, with five stars cut by the same hand.",
+      "palette": [
+        "#16283F",
+        "#C9973F",
+        "#F3E7D2",
+        "#4E9EA6",
+        "#E4622E"
+      ],
+      "materials": [
+        "gold leaf with chisel highlight",
+        "varnished mahogany",
+        "rope moulding",
+        "brass fasteners"
+      ],
+      "viewport": "A sand-cream boatyard ground, not a dark page. Centred on it, one varnished navy plate: HBD SUMMER PARTY gilded across it in a shaded signwriter's roman, and beneath it the hailing port — 어반피크닉 워터파티룸 · 분당서현. Between the two lines, where a signwriter would gild a rosette, sits a birthday cake with five lit candles drawn in the same gold-leaf grammar and ringed by a life-ring outline: the birthday element is carved into the plate, not pasted on it. Five identical gilt stars run in an even row below. 2026.08.28 FRI 17:00 is incised into the varnish as a cut line. At the bottom edge a real waterline moves in pool aqua.",
+      "risk": "Gold on dark varnish is also whisky and barbershop. If the navy takes the whole page instead of staying a plate on a sand ground, it stops reading as a birthday.",
+      "raised": [
+        {
+          "from": "Curved-crease shell",
+          "raise": "Every section is an incision in the nameboard plate itself — no floating cards, no added containers anywhere on the page."
+        },
+        {
+          "from": "Raku smoke-flash",
+          "raise": "One reserved hot colour: candle-flame orange appears exactly once, at the cake, and nowhere else."
+        },
+        {
+          "from": "VHS rental wall",
+          "raise": "The what-to-bring list becomes five hand-lettered chandlery tags — equal objects packed edge to edge, never a bulleted list."
+        },
+        {
+          "from": "Ebru floated pigment",
+          "raise": "The waterline is a genuinely moving medium that displaces, not a decorative wave path."
+        }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "The Harbour Almanac",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "printed tide tables and harbour almanacs",
+      "thesis": "The party as the day's entry in a tide table: high water 17:00, company of five, conditions fair.",
+      "palette": [
+        "#EFE3C9",
+        "#1B2C44",
+        "#B08A45",
+        "#3E8C93"
+      ],
+      "materials": [
+        "letterpress on almanac stock",
+        "hairline brass rules",
+        "tabular figures"
+      ],
+      "viewport": "One tall almanac page for 2026.08.28. A ruled table gives the day its facts in tabular figures, high water at 17:00 set as the only bold row. Five identical marks run down the margin where an almanac would print its phase symbols. A gilt cake device sits at the head of the sheet as the almanac's own plate engraving.",
+      "risk": "This is also where a careful designer lands. Letterpress calm is the most tasteful answer available, and tasteful calm can under-deliver on warm and playful."
+    },
+    {
+      "id": "challenger-street-type",
+      "label": "Street Wood Type",
+      "verdict": "competitive",
+      "lineage": "public theater street posters, wood-type capitals at architectural scale",
+      "thesis": "The invitation shouted from a wall: five words in condensed wood-type caps, baselines on diagonals, cropped by the frame.",
+      "palette": [
+        "#F2C200",
+        "#F6F3EC",
+        "#141210",
+        "#D8442A"
+      ],
+      "materials": [
+        "wood-type ink",
+        "poster paper",
+        "hard frame crops"
+      ],
+      "viewport": "Five cropped words fill the phone top to bottom — HBD / SUMMER / PARTY / 8.28 / 17:00 — each on its own diagonal, the last one sliced by the edge so your eye finishes it.",
+      "case": "Holds audience identification: everyone reads a shouted poster in one beat, and five words on five diagonals is the Rule of Five for free. Loses product clarity — shouting fights come-as-you-are, the packing list has nowhere quiet to sit, and it abandons the maritime world you pinned.",
+      "risk": "Reads as a rally poster rather than an invitation, and nothing on it is nautical.",
+      "hero": "https://impeccable.style/worlds/cards/brand-identity-canon-scher-street-typography-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/brand-identity-canon-scher-street-typography.webp"
+    },
+    {
+      "id": "challenger-seven-segment",
+      "label": "Seven Segment",
+      "verdict": "competitive",
+      "lineage": "the seven-segment family: bedside clocks, price totems, scoreboards",
+      "thesis": "The party as a lit time — five cells counting down to 17:00 on a matte panel where unlit segments are designed too.",
+      "palette": [
+        "#FF3B21",
+        "#FFA83A",
+        "#0D0F0E",
+        "#241F1D"
+      ],
+      "materials": [
+        "LED segment mask",
+        "ghost cells",
+        "matte near-black"
+      ],
+      "viewport": "A rigid cell mask fills the phone. 17:00 sits in fixed slots, five ghost cells lighting one by one as the days close, and the venue rides beneath in a single scoreboard row.",
+      "case": "Holds product clarity on the fact that matters most — a party has exactly one start time, and a countdown states it without a sentence. Loses audience identification for a birthday: a clock panel cannot carry warmth, a packing list, or five people who are all equally the point.",
+      "risk": "Near-black with a red glow is the single most common AI aesthetic, and a clock is not a celebration.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock.webp"
+    },
+    {
+      "id": "challenger-curved-crease",
+      "label": "Curved-Crease Shell",
+      "verdict": "declined",
+      "lineage": "a circular sheet folded along one sweeping crease into a rigid shell",
+      "thesis": "The invitation as one cream disc that rises into a saddle along a single arc.",
+      "palette": [
+        "#F1EADC",
+        "#3A3A38",
+        "#9A9691"
+      ],
+      "materials": [
+        "cotton paper",
+        "graphite shadow",
+        "compass arc"
+      ],
+      "viewport": "A cream disc lifting along one charcoal arc, the party facts registered against plan and section views.",
+      "case": "Loses both axes. Close friends heading to a pool party do not identify with deployable geometry, and the facts end up subordinate to a demonstration of curvature.",
+      "kept": "Structural honesty — rigidity earned from the sheet itself, never from added support.",
+      "risk": "Reads as an architecture-school plate.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-curved-crease-shell-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-curved-crease-shell.webp"
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Raku Smoke-Flash",
+      "verdict": "declined",
+      "lineage": "a red-hot raku vessel lifted into smoke and leaves",
+      "thesis": "The invitation as an unrehearsed carbonized skin, ember orange reserved for what is still hot.",
+      "palette": [
+        "#141210",
+        "#D8D2C6",
+        "#E2661F"
+      ],
+      "materials": [
+        "carbonized clay",
+        "crackled silver glaze",
+        "ember"
+      ],
+      "viewport": "Soot-black ground, crackled white body, one ember-orange region where the page is live.",
+      "case": "Loses both axes. Thermal-shock ceramics has no bearing on a birthday pool party, and an unrehearsed surface fights an invitation's need for exact, trustworthy facts.",
+      "kept": "Reserved hot colour — one temperature, appearing only where the action is.",
+      "risk": "Sombre and funerary for a party.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash.webp"
+    },
+    {
+      "id": "challenger-vhs",
+      "label": "VHS Rental Wall",
+      "verdict": "declined",
+      "lineage": "a friday-night video store wall of clamshell spines",
+      "thesis": "The invitation as a genre shelf: five clamshells face-out under fluorescent light.",
+      "palette": [
+        "#0E0E12",
+        "#E4C11B",
+        "#C22A2A",
+        "#4E8FC7"
+      ],
+      "materials": [
+        "clamshell plastic",
+        "cut vinyl letters",
+        "marker shelf talkers"
+      ],
+      "viewport": "A packed shelf strip, five boxes face-out, handwritten talkers beneath each.",
+      "case": "Loses both axes. Wrong decade for a 2026 Korean pool party, it overrides the maritime world you pinned, and its central grammar — the gap where a rented box should be — means absence, the exact opposite of five equals all present.",
+      "kept": "Many equal objects packed edge to edge, persuaded by hand-lettered tags.",
+      "risk": "Nostalgia for a decade none of this belongs to.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-vhs-rental-wall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/vernacular-ephemera-vhs-rental-wall.webp"
+    },
+    {
+      "id": "challenger-ebru",
+      "label": "Ebru Floated Pigment",
+      "verdict": "declined",
+      "lineage": "pigment combed on a thickened bath, lifted in one contact",
+      "thesis": "The invitation made entirely of moving water, lifted once and never repeated.",
+      "palette": [
+        "#1D3B52",
+        "#E9DFC8",
+        "#C4573F",
+        "#2F7F86"
+      ],
+      "materials": [
+        "floated pigment",
+        "sized paper",
+        "single lift"
+      ],
+      "viewport": "A full-frame marbled bath, figures dragged through floating colour, the facts riding the lift.",
+      "case": "Loses on clarity decisively. Water is genuinely on-theme for a pool party, but an irreversible one-pass liquid cannot hold a date, a venue and a packing list in any stable hierarchy, and marbling specifically is not a language this audience reads.",
+      "kept": "Water as a real moving medium rather than a drawn imitation of one.",
+      "risk": "Beautiful and unreadable.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-ebru-floated-pigment-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-ebru-floated-pigment.webp"
+    }
+  ],
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The modern e-invite, executed impeccably: centred serif name, enormous date, soft summer photograph, one share button.",
+    "palette": [
+      "#FBF8F3",
+      "#1F2937",
+      "#7FB3C8",
+      "#D9A441"
+    ],
+    "materials": [
+      "clean centred grid",
+      "soft photography",
+      "generous whitespace"
+    ],
+    "viewport": "Name centred at the top, date at display scale beneath it, a soft pool photograph behind a scrim, venue and what-to-bring in a tidy stack, a share button at the bottom.",
+    "risk": "Indistinguishable from every other invitation link your friends have opened this year — which is exactly why it is safe."
+  },
+  "canon": true,
+  "steer": true,
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  }
+}
