@@ -1,9 +1,0 @@
-{
-  "prompt": "A single warning icon illustration, centred, on a completely flat plain background of the exact deep teal green colour #013237. The object beneath the prohibition sign: a chunky toy WATER GUN (water pistol) seen from the side, in persimmon orange and bone cream with a chartreuse nozzle and a chartreuse squirt of water arcing from the muzzle. Simple, bold, toy-like.\n\nSTYLE: flat vector silkscreen art with VERY BOLD heavy uniform dark outlines, the weight of a screenprinted poster. No gradients, no soft shading, no drop shadows, only flat fills and a faint even print grain. Simple, bold and instantly readable as a warning icon, drawn for adults rather than for a nursery.\n\nOver the object, a bold PERSIMMON ORANGE prohibition sign: a thick open circle with a single thick diagonal bar running from upper left to lower right across the object. The circle and bar are persimmon orange with a dark outline, drawn on top so the object stays visible beneath.\n\nColours, strictly and only: deep teal green background #013237, bone cream, persimmon orange, chartreuse, and very dark green-black outlines. No other colour.\n\nThe subject is CENTRED with generous empty margin on all four sides — it must not touch or be cut off by any edge. Absolutely no text, no letters, no numbers, no logos, no human faces, no border, no frame.\n",
-  "createdAt": "2026-08-25T07:12:37.575Z",
-  "tool": "generate-image.mjs",
-  "model": "gpt-image-2",
-  "refs": [
-    "public/img/cake-hero.png"
-  ]
-}
