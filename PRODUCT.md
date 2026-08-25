@@ -34,8 +34,8 @@ guest list is settled off-site and the page has no administrative surface.
 ## Product Purpose
 
 The site is an invitation to a single event: **HBD Summer Party**, a joint summer
-birthday party for five people, held Friday, August 28, 2026 at 5:00 PM at Urban
-Picnic 어반피크닉 워터파티룸 분당서현점.
+birthday party for five people, held Friday, August 28, 2026 from 5:00 PM to
+10:00 PM at Urban Picnic 어반피크닉 워터파티룸 분당서현점.
 
 Success is **the invitation being understood and felt, and guests arriving prepared.**
 It is not attendance and not RSVP completion: RSVP has already been received, so the
@@ -85,7 +85,7 @@ no headcount, no calendar integration, no analytics has been asked for.
 
 Confirmed content the site carries:
 - Event name: HBD Summer Party
-- Date and time: Friday, August 28, 2026, 5:00 PM
+- Date and time: Friday, August 28, 2026, 5:00 PM - 10:00 PM (end time confirmed 2026-08-25)
 - Venue: Urban Picnic 어반피크닉 워터파티룸 분당서현점
 - Venue map link: <https://naver.me/Fr7bgqO0>
 - What to bring: swimsuit or rashguard (ordinary clothes are not allowed in the water),

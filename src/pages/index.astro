@@ -16,19 +16,19 @@ const KIT = [
   {
     src: base + 'img/kit-swimsuit.png',
     name: '수영복',
-    note: '래시가드도 좋아요. 일반 옷은 입수가 안 돼요',
+    note: ['래시가드도 좋아요', '일반 옷은 입수가 안돼요'],
     alt: '수영복 캐릭터가 한 손을 흔들고 있는 그림',
   },
   {
     src: base + 'img/kit-aquashoes.png',
     name: '아쿠아슈즈',
-    note: '미끄럼 방지용이에요',
+    note: ['미끄럼 방지용이에요', '없으면 걸어다녀요!'],
     alt: '아쿠아슈즈 한 켤레 캐릭터가 한 손을 흔들고 있는 그림',
   },
   {
     src: base + 'img/kit-clothes-v2.png',
     name: '갈아입을 옷',
-    note: '돌아갈 때 입을 마른 옷',
+    note: ['수건은 제공돼요'],
     alt: '개어놓은 옷 캐릭터가 두 팔을 벌리고 있는 그림',
   },
 ];
@@ -79,7 +79,7 @@ const RULES = [
         </div>
         <div class="facts__row">
           <dt>시간</dt>
-          <dd>오후 5시</dd>
+          <dd>오후 5시 - 오후 10시</dd>
         </div>
         <div class="facts__row">
           <dt>장소</dt>
@@ -115,7 +115,14 @@ const RULES = [
             <li class="kit__item">
               <img src={item.src} alt={item.alt} decoding="async" />
               <p class="kit__name">{item.name}</p>
-              <p class="kit__note">{item.note}</p>
+              <p class="kit__note">
+                {item.note.map((line, i) => (
+                  <>
+                    {i > 0 && <br />}
+                    {line}
+                  </>
+                ))}
+              </p>
             </li>
           ))
         }
