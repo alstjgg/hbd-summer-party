@@ -10,22 +10,23 @@ import FiveMarks from '../components/FiveMarks.astro';
 const VENUE = '어반피크닉 워터파티룸 · 분당서현';
 const VENUE_FULL = '어반피크닉 워터파티룸 분당서현점';
 const MAP_URL = 'https://naver.me/Fr7bgqO0';
+const base = import.meta.env.BASE_URL;
 
 const KIT = [
   {
-    src: '/img/kit-swimsuit.png',
+    src: base + 'img/kit-swimsuit.png',
     name: '수영복',
     note: '젖어도 되는 옷이면 뭐든 괜찮아요',
     alt: '수영복 캐릭터가 한 손을 흔들고 있는 그림',
   },
   {
-    src: '/img/kit-towel.png',
+    src: base + 'img/kit-towel.png',
     name: '수건',
     note: '한 장이면 충분해요',
     alt: '돌돌 말린 수건 캐릭터가 두 팔을 벌리고 있는 그림',
   },
   {
-    src: '/img/kit-clothes.png',
+    src: base + 'img/kit-clothes.png',
     name: '갈아입을 옷',
     note: '돌아갈 때 입을 마른 옷',
     alt: '개어놓은 옷 캐릭터가 두 팔을 벌리고 있는 그림',
@@ -44,7 +45,7 @@ const KIT = [
 
       <figure class="bill__art">
         <img
-          src="/img/cake-hero.png"
+          src={`${base}img/cake-hero.png`}
           width="969"
           height="972"
           alt="다섯 개의 초를 꽂은 생일 케이크 캐릭터가 커다란 튜브를 끼고 손을 흔들고 있는 그림"
